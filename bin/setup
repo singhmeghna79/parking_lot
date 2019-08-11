@@ -1,0 +1,14 @@
+# cleaning the setup
+echo "cleaning setup..."
+make clean
+echo "done"
+
+# running the tests
+echo "running tests..."
+make test
+echo "done"
+
+# compiling and building binary
+echo "building binary..."
+make build
+echo "done"
