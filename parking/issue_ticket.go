@@ -14,9 +14,11 @@ func (car car) createTicket() (ticket, error) {
 }
 
 func searchNearestSlot() int {
-	for _, val := range parking {
-		if val.slotAvailable {
-			return val.ticket.parkingSlotNumber
+	for i, _ := range parking {
+		for j, val := range parking[i] {
+			if val.slotAvailable {
+				return val.slotAvailable{i, j}
+			}
 		}
 	}
 	return -1

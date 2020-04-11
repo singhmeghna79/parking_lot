@@ -1,6 +1,8 @@
 package parking
 
-var parking []parkingSlot
+var parking [][]parkingSlot
+
+var dispatchRule string
 
 type car struct {
 	registrationNumber string
@@ -9,7 +11,7 @@ type car struct {
 
 type ticket struct {
 	car               car
-	parkingSlotNumber int
+	parkingSlotNumber [2]int
 }
 
 type parkingSlot struct {

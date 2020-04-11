@@ -64,7 +64,7 @@ func executeCommands(cmd []string) {
 	case "create_parking_lot":
 		totalSlots, err := strconv.Atoi(cmd[1])
 		if err != nil {
-			fmt.Println("cannot conver total slot to int")
+			fmt.Println("cannot convert total slot to int")
 		}
 		cpl := parking.CreateParkingLot(totalSlots)
 		fmt.Println(cpl)
@@ -96,4 +96,6 @@ func executeCommands(cmd []string) {
 	case "exit":
 		os.Exit(0)
 	}
+case "dispatch_rule":
+	dispatchRule = cmd[1]
 }
